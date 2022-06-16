@@ -27,7 +27,7 @@ public class Application {
   private static final String PASSWORD = "Zaveri#3125";
   private static final String PUBLIC_ADDRESS = "0xd254c36ace38832d7191cfc399c3212069490a7f";
   private static final String CONTRACT_ADDRESS = "0xb3035d4a277b66e75f732666ed8d037806b7a640";
-  private static final String PRIVATE_KEY = "a0a2a8359f4fa881f96d5bdd35718cbe0450881d15dc2056ad50e54a8ea1faa5";
+  private static final String PRIVATE_KEY = "xxx";
 
   private Web3j web3j;
 
@@ -37,12 +37,12 @@ public class Application {
     app.init();
     EthGetBalance ethBalance = app.getEthBalance();
     System.out.println("Eth balance: " + ethBalance.getBalance());
-    app.deployAndRunContract();
+    app.loadAndInteractWithContract();
     ethBalance = app.getEthBalance();
     System.out.println("New Eth balance: " + ethBalance.getBalance());
   }
 
-  public void deployAndRunContract() throws Exception {
+  public void loadAndInteractWithContract() throws Exception {
     System.out.println("Change 8");
     BigInteger gasprice = BigInteger.valueOf(452893249721253L);
 
